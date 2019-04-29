@@ -1163,6 +1163,10 @@ namespace cryptonote
     return hash_result;
   }
 
+
+
+
+
   //---------------------------------------------------------------
   bool get_block_hash(const block& b, crypto::hash& res)
   {
