@@ -1,5 +1,6 @@
 # Monero
 
+Copyright (c) 2019 The Txchangecoin Project.   
 Copyright (c) 2014-2018 The Monero Project.   
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
@@ -10,6 +11,9 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 - Mail: [dev@txchange.online](mailto:dev@txchange.online)
 - GitHub: [https://github.com/txchangecoin-project/txchangecoin](https://github.com/txchangecoin-project/txchangecoin)
 - IRC: [#txchangecoin-dev on Freenode](https://webchat.freenode.net/?randomnick=1&channels=%23txchangecoin-dev&prompt=1&uio=d4)
+- Pool: [pools.txchange.online](https://pools.txchange.online)
+- Pool Api: [api.txchange.online](https://api.txchange.online)
+- Explorer: [explorer.txchange.online](https://explorer.txchange.online)
 
 ## Vulnerability response
 
