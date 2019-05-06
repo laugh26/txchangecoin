@@ -4079,9 +4079,10 @@ namespace tools
       { cryptonote::TESTNET, "testnet" },
       { cryptonote::STAGENET, "stagenet" },
     };
+        if (!req.any_net_type && !m_wallet) return not_open(er);
     for (const auto &net_type: net_types)
     {
-      if (!req.any_net_type && net_type.type != m_wallet->nettype())
+       if (!req.any_net_type && (!m_wallet || net_type.type != m_wallet->nettype()))
         continue;
       if (req.allow_openalias)
       {
@@ -4163,6 +4164,7 @@ namespace tools
     {
       er.code = WALLET_RPC_ERROR_CODE_NO_DAEMON_CONNECTION;
       er.message = "SSL is enabled but no user certificate or fingerprints were provided";
+      return false;
     }
 
     if (!m_wallet->set_daemon(req.address, boost::none, req.trusted, std::move(ssl_options)))
@@ -4187,7 +4189,7 @@ namespace tools
     {
       er.code = WALLET_RPC_ERROR_CODE_INVALID_LOG_LEVEL;
       er.message = "Error: log level not valid";
-      return true;
+      return false;
     }
     mlog_set_log_level(req.level);
     return true;
